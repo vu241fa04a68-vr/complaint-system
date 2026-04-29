@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Complaint System</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:radial-gradient(circle,#0f2027,#203a43,#2c5364);
+color:white;
+}
+.box{
+width:360px;
+margin:40px auto;
+padding:20px;
+background:rgba(0,0,0,0.7);
+border-radius:12px;
+box-shadow:0 0 20px cyan;
+}
+input,select,textarea{
+width:100%;
+margin:6px 0;
+padding:10px;
+border:none;
+border-radius:6px;
+}
+button{
+width:100%;
+padding:10px;
+margin-top:8px;
+background:cyan;
+border:none;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Complaint System</h2>
+
+<form id="form">
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+
+<select id="language">
+<option>English</option>
+<option>Telugu</option>
+<option>Hindi</option>
+</select>
+
+<select id="category">
+<option>Police</option>
+<option>Electricity</option>
+<option>Water</option>
+<option>Road</option>
+<option>Garbage</option>
+<option>Municipal</option>
+<option>Health</option>
+</select>
+
+<textarea id="description" placeholder="Describe issue"></textarea>
+
+<input type="file" id="file">
+
+<input id="otp" placeholder="Enter OTP">
+
+<button type="button" onclick="sendOTP()">Send OTP</button>
+<button type="button" onclick="verifyOTP()">Verify OTP</button>
+
+<button type="button" onclick="submitComplaint()">Submit Complaint</button>
+
+</form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
